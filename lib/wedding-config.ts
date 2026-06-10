@@ -21,10 +21,7 @@ export type WeddingConfig = {
     title: string;
     text: string;
   };
-  heroImage: {
-    desktop: string;
-    mobile: string;
-  };
+  heroImage: string;
   guests: GuestEntry[];
 };
 
@@ -50,10 +47,7 @@ export const weddingConfig: WeddingConfig = {
     title: "Ahmed & Soad Wedding Invitation",
     text: "You are invited to celebrate the wedding of Ahmed & Soad on 20 June 2026."
   },
-  heroImage: {
-    desktop: "/images/engagement-hero-desktop.jpg",
-    mobile: "/images/engagement-hero-mobile.jpg"
-  },
+  heroImage: "/images/engagement-hero.jpg",
   guests: [
     { name: "Ahmed Owida" },
     { name: "Ahmed Shahwan" },

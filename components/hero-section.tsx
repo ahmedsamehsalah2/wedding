@@ -31,22 +31,13 @@ export function HeroSection({
     <section className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={weddingConfig.heroImage.mobile}
+          src={weddingConfig.heroImage}
           alt="Ahmed and Soad engagement portrait"
           fill
           priority
-          sizes="(max-width: 767px) 100vw, 0vw"
+          sizes="100vw"
           unoptimized
-          className="object-cover object-center grayscale brightness-[0.78] contrast-[1.01] saturate-[0.82] md:hidden [filter:grayscale(1)_contrast(1.01)_brightness(0.78)_saturate(0.82)]"
-        />
-        <Image
-          src={weddingConfig.heroImage.desktop}
-          alt="Ahmed and Soad engagement portrait"
-          fill
-          priority
-          sizes="(min-width: 768px) 100vw, 0vw"
-          unoptimized
-          className="hidden object-cover object-[center_18%] grayscale brightness-[0.8] contrast-[1.01] saturate-[0.8] md:block [filter:grayscale(1)_contrast(1.01)_brightness(0.8)_saturate(0.8)]"
+          className="object-cover object-[center_18%] grayscale brightness-[0.8] contrast-[1.01] saturate-[0.8] [filter:grayscale(1)_contrast(1.01)_brightness(0.8)_saturate(0.8)]"
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(255,240,231,0.08),transparent_24%),radial-gradient(circle_at_center,transparent_38%,rgba(18,9,11,0.28)_72%,rgba(18,9,11,0.7)_100%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,9,11,0.12),rgba(18,9,11,0.4)_48%,rgba(18,9,11,0.72))]" />

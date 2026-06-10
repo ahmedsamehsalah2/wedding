@@ -21,13 +21,9 @@ Open `http://localhost:3000`.
 
 ## Replace the Hero Photo
 
-Place the processed hero images at:
+Place the hero image at:
 
-`public/images/engagement-hero-desktop.jpg`
-
-`public/images/engagement-hero-mobile.jpg`
-
-This project now uses separate hero crops for desktop and mobile automatically.
+`public/images/engagement-hero.jpg`
 
 The UI is already styled to apply:
 
@@ -38,7 +34,7 @@ The UI is already styled to apply:
 - film grain overlay
 - rose-gold floating particles
 
-Update `heroImage` in `lib/wedding-config.ts` if you want to use different file names.
+Update `heroImage` in `lib/wedding-config.ts` if you want to use a different file name.
 
 ## Edit Invitation Content
 
