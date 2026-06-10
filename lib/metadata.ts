@@ -2,13 +2,20 @@ import type { Metadata } from "next";
 
 import { weddingConfig } from "@/lib/wedding-config";
 
-const siteUrl = "https://example.vercel.app";
+const siteUrl = "https://wedding-lilac-pi-46.vercel.app";
 
-export function buildMetadata(pathname = "/"): Metadata {
-  const title = `${weddingConfig.couple.groom} & ${weddingConfig.couple.bride} | Wedding Invitation`;
+export function buildMetadata(pathname = "/", guestName?: string): Metadata {
+  const title = guestName
+    ? `${guestName} | ${weddingConfig.couple.groom} & ${weddingConfig.couple.bride} Wedding Invitation`
+    : `${weddingConfig.couple.groom} & ${weddingConfig.couple.bride} | Wedding Invitation`;
   const description =
-    "A luxury interactive wedding invitation experience for Ahmed & Soad.";
+    guestName
+      ? `${guestName}, you are invited to celebrate the wedding of ${weddingConfig.couple.groom} & ${weddingConfig.couple.bride}.`
+      : "A luxury interactive wedding invitation experience for Ahmed & Soad.";
   const url = new URL(pathname, siteUrl).toString();
+  const imageUrl = guestName
+    ? new URL(`/guest/${pathname.split("/").at(-1)}/opengraph-image`, siteUrl).toString()
+    : new URL("/opengraph-image", siteUrl).toString();
 
   return {
     metadataBase: new URL(siteUrl),
@@ -22,12 +29,21 @@ export function buildMetadata(pathname = "/"): Metadata {
       title,
       description,
       url,
-      type: "website"
+      type: "website",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: title
+        }
+      ]
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description
+      description,
+      images: [imageUrl]
     }
   };
 }

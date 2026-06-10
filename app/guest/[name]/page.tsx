@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: GuestPageProps): Promise<Meta
     return buildMetadata("/guest");
   }
 
-  return buildMetadata(`/guest/${name}`);
+  return buildMetadata(`/guest/${name}`, guestName);
 }
 
 export default async function GuestPage({ params }: GuestPageProps) {
