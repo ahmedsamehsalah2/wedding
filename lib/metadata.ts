@@ -13,9 +13,7 @@ export function buildMetadata(pathname = "/", guestName?: string): Metadata {
       ? `Wedding invitation for ${guestName} to celebrate ${weddingConfig.couple.groom} & ${weddingConfig.couple.bride}.`
       : `Wedding invitation for ${weddingConfig.couple.groom} & ${weddingConfig.couple.bride}.`;
   const url = new URL(pathname, siteUrl).toString();
-  const imageUrl = guestName
-    ? new URL(`/guest/${pathname.split("/").at(-1)}/opengraph-image`, siteUrl).toString()
-    : new URL("/opengraph-image", siteUrl).toString();
+  const imageUrl = new URL("/images/share-preview.jpg", siteUrl).toString();
 
   return {
     metadataBase: new URL(siteUrl),
@@ -35,7 +33,8 @@ export function buildMetadata(pathname = "/", guestName?: string): Metadata {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: title
+          alt: title,
+          type: "image/jpeg"
         }
       ]
     },
