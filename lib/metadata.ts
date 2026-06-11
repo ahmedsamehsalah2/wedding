@@ -10,8 +10,8 @@ export function buildMetadata(pathname = "/", guestName?: string): Metadata {
     : `${weddingConfig.couple.groom} & ${weddingConfig.couple.bride} | Wedding Invitation`;
   const description =
     guestName
-      ? `${guestName}, you are invited to celebrate the wedding of ${weddingConfig.couple.groom} & ${weddingConfig.couple.bride}.`
-      : "A luxury interactive wedding invitation experience for Ahmed & Soad.";
+      ? `Wedding invitation for ${guestName} to celebrate ${weddingConfig.couple.groom} & ${weddingConfig.couple.bride}.`
+      : `Wedding invitation for ${weddingConfig.couple.groom} & ${weddingConfig.couple.bride}.`;
   const url = new URL(pathname, siteUrl).toString();
   const imageUrl = guestName
     ? new URL(`/guest/${pathname.split("/").at(-1)}/opengraph-image`, siteUrl).toString()

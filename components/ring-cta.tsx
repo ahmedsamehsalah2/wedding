@@ -24,7 +24,7 @@ export function RingCTA({ activated, onActivate }: RingCTAProps) {
         <AnimatedRing activated={activated} />
       </div>
       <motion.span
-        className="text-xs uppercase tracking-[0.45em] text-champagne/80 sm:text-sm"
+        className="text-sm font-semibold uppercase tracking-[0.38em] text-champagne/85 sm:text-base"
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.9 }}

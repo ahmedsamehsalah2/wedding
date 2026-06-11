@@ -60,6 +60,20 @@ export const weddingConfig: WeddingConfig = {
     { name: "Mohamed Nasr" },
     { name: "Aya" },
     { name: "Alaa" },
-    { name: "Owida" }
+    { name: "Owida" },
+    { name: "Ahmed Elsayed & Aya El-Raggal" },
+    { name: "Raji Osama" },
+    { name: "Fayrouz" },
+    { name: "Ahmed Khaled" },
+    { name: "Mazen Hany" },
+    { name: "Mohamed Emad" },
+    { name: "Alaa Hamada" },
+    { name: "Eman Magdy" },
+    { name: "Sondos & Mohamed" },
+    { name: "Somaya & Maher" },
+    { name: "Salma Etman" },
+    { name: "Doha" },
+    { name: "Ahmed Abo-Zaid" },
+    { name: "Yasmin Shalaby" }
   ]
 };
