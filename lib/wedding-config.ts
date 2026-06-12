@@ -77,6 +77,7 @@ export const weddingConfig: WeddingConfig = {
     { name: "Yasmin Shalaby" },
     { name: "Arsany Ashraf" },
     { name: "Mohamed Ibrahim" },
-    { name: "Aal Refaee" }
+    { name: "Aal Refaee" },
+    { name: "Hamza Sameh" }
   ]
 };
